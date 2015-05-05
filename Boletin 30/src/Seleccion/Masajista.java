@@ -12,8 +12,13 @@ public class Masajista extends SeleccionFutbol {
     public Masajista() {
     }
 
-    public Masajista(String nombre, String apellidos, int edad, int id, String titulacion, int añosExp) {
-        super(id, nombre, apellidos, edad);
+    public Masajista(String titulacion, int añosExp) {
+        this.titulacion = titulacion;
+        this.añosExp = añosExp;
+    }
+
+    public Masajista(String titulacion, int añosExp, String nombre, String apellidos, int edad, int id) {
+        super(nombre, apellidos, edad, id);
         this.titulacion = titulacion;
         this.añosExp = añosExp;
     }
@@ -59,4 +64,8 @@ public class Masajista extends SeleccionFutbol {
         System.out.println("Jugando el mundial y preparados por si acaso hay alguna lesion");
     }
 
+    @Override
+    public String toString() {
+        return "Masajista:" + "\nID:" + id + "\nNombre:" + nombre + "\nApellidos:" + apellidos + "\nEdad:" + edad + "\nTitulacion:" + titulacion + "\nAños de experiencia:" + añosExp + '\n';
+    }
 }

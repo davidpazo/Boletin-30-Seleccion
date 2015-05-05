@@ -19,7 +19,7 @@ public abstract class SeleccionFutbol implements IntegranteSeleccionFutbol{
     public SeleccionFutbol() {
     }
 
-    public SeleccionFutbol(int id, String nombre, String apellidos, int edad) {
+    public SeleccionFutbol( String nombre, String apellidos, int edad,int id) {
         this.id = id;
         this.nombre = nombre;
         this.apellidos = apellidos;

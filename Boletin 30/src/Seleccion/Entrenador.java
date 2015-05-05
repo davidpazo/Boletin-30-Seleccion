@@ -11,8 +11,12 @@ public class Entrenador extends SeleccionFutbol {
     public Entrenador() {
     }
 
-    public Entrenador(int idFederacion, int id, String nombre, String apellidos, int edad) {
-        super(id, nombre, apellidos, edad);
+    public Entrenador(int idFederacion) {
+        this.idFederacion = idFederacion;
+    }
+
+    public Entrenador(int idFederacion, String nombre, String apellidos, int edad, int id) {
+        super(nombre, apellidos, edad, id);
         this.idFederacion = idFederacion;
     }
 
@@ -48,4 +52,8 @@ public class Entrenador extends SeleccionFutbol {
         System.out.println("Jugando el mundial");
     }
 
+    @Override
+    public String toString() {
+        return "Entrenador:" + "\nID:" + id + "\nNombre:" + nombre + "\nApellidos:" + apellidos + "\nEdad:" + edad + "\nIDFederacion:" + idFederacion + '\n';
+    }
 }

@@ -12,10 +12,15 @@ public class Futbolista extends SeleccionFutbol {
     public Futbolista() {
     }
 
-    public Futbolista(String nombre, String apellidos, int edad, int id, int dorsal, String demarc) {
-        super(id, nombre, apellidos, edad);
+    public Futbolista(int dorsal, String demarcacion) {
         this.dorsal = dorsal;
-        this.demarcacion = demarc;
+        this.demarcacion = demarcacion;
+    }
+
+    public Futbolista(int dorsal, String demarcacion, String nombre, String apellidos, int edad, int id) {
+        super(nombre, apellidos, edad, id);
+        this.dorsal = dorsal;
+        this.demarcacion = demarcacion;
     }
 
     public int getDorsal() {
@@ -58,4 +63,8 @@ public class Futbolista extends SeleccionFutbol {
         System.out.println("Hay que ganaaaar!!");
     }
 
+    @Override
+    public String toString() {
+        return "Futbolista: " + "\nID: " + id + "\nNombre: " + nombre + "\nApellidos: " + apellidos + "\nEdad: " + edad + "\nDorsal: " + dorsal + "\nDemarcacion: " + demarcacion + '\n';
+    }
 }
